@@ -92,13 +92,3 @@ python scripts/prepare_topics.py
 ~~~
 
 只更新某个专题时，可运行 `python scripts/prepare_topics.py climate`，或将 `climate` 换成 `ocean`、`atmosphere`、`mountains`。原始输入默认缓存到系统临时目录。需要重新下载时，用 `--cache` 指定一个新的缓存目录。脚本写入 `public/data/` 并更新清单，重新构建后即可预览新数据。
-
-### 项目结构与设计文档
-
-- [src/](src/) 存放日照模型、页面与交互组件，[src/topics/](src/topics/) 存放专题地图、剖面和季节对比。
-- [public/data/](public/data/) 存放派生数据及清单，[scripts/](scripts/) 存放数据预处理脚本。
-- [tests/](tests/) 包含日照模型单元测试及页面、专题联动、引导的浏览器测试。
-
-- [产品设计](docs/product-design.md)
-- [技术设计和验收口径](docs/technical-design.md)
-- [自然地理专题实施计划](docs/topic-implementation-plan.md)

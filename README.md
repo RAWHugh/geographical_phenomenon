@@ -82,6 +82,10 @@ npm run test:browser
 
 手动检查生产构建时，运行 `npm run preview` 并打开终端显示的地址。部署时将 `dist/` 的完整内容发布到静态 HTTP 服务。部署在子目录时，通过带尾斜杠的目录 URL 打开站点，专题仍用 `#compare` 等片段定位。
 
+### GitHub Pages
+
+首次部署时，在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。此后推送到 `main` 会自动运行 [部署工作流](.github/workflows/deploy-pages.yml)，安装依赖、执行单元测试、构建并发布 `dist/`。也可以在 **Actions → Deploy to GitHub Pages → Run workflow** 手动运行。部署成功后，在运行详情的 `github-pages` 环境或 **Settings → Pages** 打开站点。
+
 ### 重新生成专题数据
 
 项目已包含运行所需的派生数据。需要更新数据时，在 Python 环境安装脚本依赖并运行生成命令。

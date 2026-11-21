@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <title>大气环流</title>
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="#202b47" stroke="#556b9e" stroke-width="2"/>
+  <path d="M13 16h13a4 4 0 1 0-4-4" fill="none" stroke="#b9d2ff" stroke-width="3.8" stroke-linecap="round"/>
+  <path d="M9 24h25a5 5 0 1 1-5 5" fill="none" stroke="#d5e4ff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M13 34h7" fill="none" stroke="#8fa8ed" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <title>气候剖面</title>
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="#192c38" stroke="#567678" stroke-width="2"/>
+  <rect x="10" y="11" width="28" height="7" rx="2" fill="#e9ad68"/>
+  <rect x="10" y="21" width="28" height="7" rx="2" fill="#6bb596"/>
+  <rect x="10" y="31" width="28" height="7" rx="2" fill="#588dab"/>
+  <path d="M19 11v27" stroke="#192c38" stroke-width="5" stroke-linecap="round"/>
+  <path d="M19 11v27" stroke="#f3f2dc" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

@@ -15,6 +15,8 @@ export const topicNames = {
   compare: '季节对比',
 };
 
+export const topicIconUrl = (topic: TopicPage) => `./icons/${topic}.svg`;
+
 export const grids = {
   ocean: { width: 360, height: 180 },
   atmosphere: { width: 144, height: 72 },

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <title>季节对比</title>
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="#232c42" stroke="#697896" stroke-width="2"/>
+  <rect x="9" y="11" width="8" height="20" rx="2.5" fill="#79dce5"/>
+  <rect x="20" y="11" width="8" height="20" rx="2.5" fill="#aebaf4"/>
+  <rect x="31" y="11" width="8" height="20" rx="2.5" fill="#a5d891"/>
+  <path d="M10 37h28" stroke="#8c9cb9" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="24" cy="37" r="3.5" fill="#f6cd86"/>
+</svg>

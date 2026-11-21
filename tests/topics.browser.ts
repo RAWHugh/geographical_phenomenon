@@ -2,9 +2,31 @@ import { createHash } from 'node:crypto';
 import { expect, test } from '@playwright/test';
 import type { Locator } from '@playwright/test';
 import { guideStorageKey } from '../src/guide';
+import { topicIds, topicNames } from '../src/topics/topic-data';
 
 const pixels = (canvas: Locator) => canvas.evaluate((element: HTMLCanvasElement) => element.toDataURL());
 const frameHashes = (maps: Locator[]) => Promise.all(maps.map(async map => createHash('sha256').update(await pixels(map)).digest('hex')));
+
+test('uses a distinct header icon and favicon for each topic', async ({ page }) => {
+  await page.addInitScript(key => localStorage.setItem(key, 'seen'), guideStorageKey);
+  await page.goto('/#ocean');
+  const nav = page.getByRole('navigation', { name: '地理专题' });
+  const headerIcon = page.locator('.wordmark img');
+  const favicon = page.locator('head #page-icon');
+
+  for (const topic of topicIds) {
+    await nav.getByRole('link', { name: topicNames[topic], exact: true }).click();
+    const expected = `./icons/${topic}.svg`;
+    await expect(headerIcon).toHaveAttribute('src', expected);
+    await expect.poll(() => headerIcon.evaluate((icon: HTMLImageElement) => icon.naturalWidth)).toBeGreaterThan(0);
+    await expect(favicon).toHaveAttribute('href', expected);
+    await expect(favicon).toHaveAttribute('type', 'image/svg+xml');
+  }
+
+  await nav.getByRole('link', { name: topicNames.solar, exact: true }).click();
+  await expect(favicon).toHaveAttribute('href', /\/favicon\.ico\?v=2$/);
+  await expect(favicon).toHaveAttribute('type', 'image/x-icon');
+});
 
 test('loads ocean on a fresh visit and synchronizes months, color mode and location', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
-import { animationsOff, topicIds, topicNames } from './topic-data';
+import { animationsOff, topicIconUrl, topicIds, topicNames } from './topic-data';
 import type { TopicPage } from './topic-data';
 
 export function TopicNav({ active }: { active: TopicPage | 'solar' }) {
@@ -21,7 +21,7 @@ export function TopicHeader({ topic, period, compact = false, actions }: {
   return <header className={compact ? 'masthead topic-compact-header' : 'masthead'}>
     <div className="shell masthead-inner">
       <div className="wordmark">
-        <span className="orbit-logo" aria-hidden="true"><i /></span>
+        <img className="topic-icon" src={topicIconUrl(topic)} alt="" width={44} height={44} />
         <div><h1>{topicNames[topic]}</h1><p>{period}</p></div>
       </div>
       {actions && <div className="masthead-actions">{actions}</div>}

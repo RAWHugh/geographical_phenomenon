@@ -3,12 +3,14 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './styles.css';
 import './topics/topics.css';
-import { topicIds, topicNames } from './topics/topic-data';
+import { topicIconUrl, topicIds, topicNames } from './topics/topic-data';
 import type { TopicPage } from './topics/topic-data';
 
 const Topics = lazy(() => import('./topics/Topics'));
 const SeasonalComparison = lazy(() => import('./topics/SeasonalComparison'));
 const siteTitle = '自然地理可视化';
+const pageIcon = document.querySelector<HTMLLinkElement>('#page-icon');
+const homeIcon = pageIcon && { href: pageIcon.href, type: pageIcon.type, sizes: pageIcon.sizes.value };
 const getTopic = (): TopicPage | 'solar' => topicIds.find(topic => location.hash === `#${topic}`) ?? 'solar';
 
 function Explorer() {
@@ -25,6 +27,12 @@ function Explorer() {
   }, []);
   useEffect(() => {
     document.title = topic === 'solar' ? siteTitle : `${topicNames[topic]} · ${siteTitle}`;
+    if (pageIcon && homeIcon) {
+      const icon = topic === 'solar' ? homeIcon : { href: topicIconUrl(topic), type: 'image/svg+xml', sizes: 'any' };
+      pageIcon.type = icon.type;
+      pageIcon.sizes.value = icon.sizes;
+      pageIcon.href = icon.href;
+    }
     if (topic !== 'solar' || location.hash === '' || location.hash === '#') {
       window.scrollTo(0, 0);
     }

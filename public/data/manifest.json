@@ -1,0 +1,211 @@
+{
+  "ocean": {
+    "file": "ocean.f32",
+    "bytes": 9331200,
+    "sha256": "f4447c5cffa43d1d9cb73fa684c189668c71711355f6e3251ce609d42f036fc6",
+    "coordinates": "OGC:CRS84",
+    "attribution": "NOAA/AOML Global Drifter Program & University of Miami; Laurindo et al. (2017)",
+    "release": "3.10; observations through 2023-02-28",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "sources": [
+      {
+        "url": "https://erddap.aoml.noaa.gov/gdp/erddap/griddap/drifter_monthlymeans.nc?U[0:11][2:4:1439][2:4:631],V[0:11][2:4:1439][2:4:631],SST[0:11][2:4:1439][2:4:631]",
+        "sha256": "feb39f7adba72ebd0a28ddabed20dd99dc4330c14ca954a22127a53ad5a9ac76"
+      }
+    ]
+  },
+  "atmosphere": {
+    "file": "atmosphere.f32",
+    "bytes": 2073600,
+    "sha256": "5ac76d923e7c941fc6bf7a29fd8b5a74210e8b5fa299ba99bf1e100978002816",
+    "coordinates": "OGC:CRS84",
+    "attribution": "NOAA Physical Sciences Laboratory, NOAA NCEP/NCAR Reanalysis 1",
+    "release": "1991\u20132020 monthly long-term means",
+    "usage": "https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html",
+    "sources": [
+      {
+        "url": "https://psl.noaa.gov/thredds/fileServer/Datasets/ncep.reanalysis/Monthlies/pressure/uwnd.mon.ltm.1991-2020.nc",
+        "sha256": "39996c7f68ebbe852109990bacda3af5a9df61d398d52b579fcec63727c60b16"
+      },
+      {
+        "url": "https://psl.noaa.gov/thredds/fileServer/Datasets/ncep.reanalysis/Monthlies/pressure/vwnd.mon.ltm.1991-2020.nc",
+        "sha256": "7ca58b72fc39bce5754c9dca4f90cd1f58830f4edf82bd1e54f8f22af4c28915"
+      },
+      {
+        "url": "https://psl.noaa.gov/thredds/fileServer/Datasets/ncep.reanalysis/Monthlies/pressure/omega.mon.ltm.1991-2020.nc",
+        "sha256": "589529516315f107b98852f465b693701c4481cc125a09309aa1aa746a01a595"
+      },
+      {
+        "url": "https://psl.noaa.gov/thredds/fileServer/Datasets/ncep.reanalysis/Monthlies/surface_gauss/pres.sfc.mon.ltm.1991-2020.nc",
+        "sha256": "59d60796d6d2ff76634e23f94aa0d11cf111319d4315d617b9c142ecf388a7af"
+      }
+    ]
+  },
+  "climate": {
+    "file": "climate.f32",
+    "bytes": 1620000,
+    "sha256": "6ec3ec8b13c07d469a89e2960231ed2406cf7884d0c6d21a957108d6f191157f",
+    "coordinates": "OGC:CRS84",
+    "attribution": "NOAA Physical Sciences Laboratory (NCEP/NCAR R1); NOAA NCEI (ETOPO 2022)",
+    "release": "1991\u20132020 monthly long-term means; ETOPO 2022 v1 ice surface",
+    "usage": "https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html",
+    "elevation_license": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sources": [
+      {
+        "url": "https://psl.noaa.gov/thredds/fileServer/Datasets/ncep.reanalysis/Monthlies/surface_gauss/air.2m.mon.ltm.1991-2020.nc",
+        "sha256": "c86a3c575010ca2c9414b24022361c43be6966dcdc62c821c1918e9c44ca9be9"
+      },
+      {
+        "url": "https://psl.noaa.gov/thredds/fileServer/Datasets/ncep.reanalysis/Monthlies/surface_gauss/prate.sfc.mon.ltm.1991-2020.nc",
+        "sha256": "35c390d9b82128925f960b8189992f3f617d131d8f4af4051dcd216d40825798"
+      },
+      {
+        "url": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/ETOPO_2022_v1_60s.nc?z[60:120:10799][60:120:21599]",
+        "sha256": "a27bca2bbabd248aad59177c40dd5fc736d5106579d0d6e1ae859fb6baf0655a"
+      }
+    ]
+  },
+  "mountains": {
+    "file": "mountains.json",
+    "bytes": 3596214,
+    "sha256": "478f80395978dd5c5cd47d789e618452212907fcc33db62e061007e4525ac9d6",
+    "coordinates": "longitude, latitude in the MULLER2019 reconstruction frame",
+    "attribution": "EarthByte, M\u00fcller et al. (2019), via GPlates Web Service",
+    "release": "MULLER2019; frames every 10 Ma from 100 Ma to present",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "sources": [
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=100&model=MULLER2019",
+        "sha256": "7289633510c70cc63b9f0c2cdb523f40668c444e8690ce666d5cdcab60ca0135"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=100&model=MULLER2019",
+        "sha256": "bffdc4f623c909d8b55c6e3e005cf2cc8775d0da020b423f945b12e2d82df37d"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=100&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "4eb94f03f934c62ca89695928fe0998551a86ede4323bb93fdc393144712ad00"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=90&model=MULLER2019",
+        "sha256": "1f95d82bbdff02191dbc16979db5849e310877d163a37ca2b3f78cbda0d456b0"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=90&model=MULLER2019",
+        "sha256": "9240402826e885dbfcaf7bc873d037f333996125e37ca0ad9de129ca02e09e2a"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=90&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "091edf390418fb1addbb29b0057f287682108a9af9b99217b5907d0f039cbd92"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=80&model=MULLER2019",
+        "sha256": "0acfd8fa61da16c0f3b47fac1a9df1008123fb2f2b7efb71742dc419f1cc3861"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=80&model=MULLER2019",
+        "sha256": "429e2678348f5da483d3642f6cfb48efae73a1e3f892aaf49b7ccf3b6b75d0ac"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=80&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "8d6a88ca7819b7e670ddf7c97281fb94b4c31017fc5a3fd43efe15770e1f3cd6"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=70&model=MULLER2019",
+        "sha256": "004605f6b1f63dde2c9e5c288da205655ed404885449470d0b88dc2f1bd2ff5b"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=70&model=MULLER2019",
+        "sha256": "e4a9397aeb72212e032eb113329b44cfb2f6d89b7ebf29554264d5758a342e8d"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=70&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "ffffa38e6d795e52a5b82da17d4fb2fe424deb5fbeb370f8ea4b59d621afaa87"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=60&model=MULLER2019",
+        "sha256": "12fc4fba6b74094b23808ff4067787f856f35b52645adf5efefdf286ba7a8110"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=60&model=MULLER2019",
+        "sha256": "f24332c1a6b08547963f7539ea903c33c852fc22cacb5e30a6ceca358539b9a1"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=60&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "f68d73e6efa11cc8b4607abf2cecd7ba194822a30b7eec583f9aaa13d8874b01"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=50&model=MULLER2019",
+        "sha256": "75a997f31d5fa7bf81e519c4b2f7dba4541ba79f228c4f927e11e4bd582b42b7"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=50&model=MULLER2019",
+        "sha256": "a7ad3e1771d56bcb0309b32846fc132f37b0ea6fbba5eca98e193707dfaeb689"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=50&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "745889a66b5eb0ba8d2e246fa1a044924ccca3f960a5dd116cb4fb8f11cd9e31"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=40&model=MULLER2019",
+        "sha256": "b1f41e16417da6dfcf8361c4b8b8cf4aae83c8babbb458afc4e6431c16ef12f6"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=40&model=MULLER2019",
+        "sha256": "e44fa4571a607a45e6b8ce470ebfb4950488305577418d68f8b338e785afc874"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=40&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "8db5984c3f8e80a417cb627b26cc154ef60746bf2762e0b243ad38a1909d3110"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=30&model=MULLER2019",
+        "sha256": "fca159379b230b8ef2137989485712e47155646849b1ed7d4d060e76b58a9bd3"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=30&model=MULLER2019",
+        "sha256": "dacd08ea0358c263afcb1b3f8b54266771bfebda7a6085501b4348e6051d3992"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=30&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "698bf900f66c482206566cc1ff0920bca609f726bb97b8ad0aa9e8d24b570971"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=20&model=MULLER2019",
+        "sha256": "e42561ccb82747e9f7dcfab384617b905c6d475ea2cc9d0d2f305eb044d26a5b"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=20&model=MULLER2019",
+        "sha256": "1aba0581c572c0cdb74f72c8e60d3baa8d8ab1b7f4a8eb30f0cb7f475bdf02c2"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=20&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "cc47249d66c57065c87771cb691ec5fa2524b856e1651ac886b06ef3980ba992"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=10&model=MULLER2019",
+        "sha256": "a8a60fd19bedc2d2f0ae85c2f1d9abbe592d7959a9bf5515e2390efd8e746906"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=10&model=MULLER2019",
+        "sha256": "9349b186223f9bc6995ca5dd4e8c3dc4accf845dd3bf8f8e95b11410a56bd6a4"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=10&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "715e2211deda9535239803c21ee688f6d0b182b0e39c77084a4fd683e9734e15"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/coastlines/?time=0&model=MULLER2019",
+        "sha256": "b8ea9c1739f1e139242d9dea20353f459a6374a748502ab4e091da1e555c17f8"
+      },
+      {
+        "url": "https://gws.gplates.org/topology/plate_boundaries/?time=0&model=MULLER2019",
+        "sha256": "3db8a9aa5833600284f0f25d90d31bd9e4e9ff9cff813a2c82346ac89e53b638"
+      },
+      {
+        "url": "https://gws.gplates.org/reconstruct/reconstruct_points/?time=0&model=MULLER2019&lons=78%2C90&lats=22%2C32",
+        "sha256": "cda5fa2a9dc423409bef6ae68a6093a233ce639362996cfea839ba3dedd4b82f"
+      }
+    ]
+  }
+}
